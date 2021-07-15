@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { MainLayout } from '../components/MainLayout';
+const API_KEY = process.env.API_KEY;
 
 export default function Home({ data }) {
 
@@ -89,7 +90,7 @@ export async function getServerSideProps() {
   const response = await fetch("https://covid-193.p.rapidapi.com/countries", {
     "method": "GET",
     "headers": {
-      "x-rapidapi-key": "153640a0d9msh22dce673d9a032ep189581jsn3935bb2bbec8",
+      "x-rapidapi-key": `${API_KEY}`,
       "x-rapidapi-host": "covid-193.p.rapidapi.com"
     }
   });

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { MainLayout } from '../../components/MainLayout';
+const API_KEY = process.env.API_KEY;
 
 export default function Country({ data }) {
   const [countryData, setCountryData] = useState(data.response[0])
@@ -43,12 +44,11 @@ export async function getServerSideProps({query}) {
   const res = await fetch(`https://covid-193.p.rapidapi.com/statistics/?country=${query.country_name}`, {
     "method": "GET",
     "headers": {
-      "x-rapidapi-key": "153640a0d9msh22dce673d9a032ep189581jsn3935bb2bbec8",
+      "x-rapidapi-key": `${API_KEY}`,
       "x-rapidapi-host": "covid-193.p.rapidapi.com"
     }
   });
   const data = await res.json();
-  console.log(data);
   if (data.results == 0) {
     return {
       notFound: true,
