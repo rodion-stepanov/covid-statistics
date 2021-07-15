@@ -1,9 +1,9 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding-left: 10.42%;
 }
 
 a {
@@ -13,4 +13,208 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.header__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  color: #333333;
+  margin: 38px 0 0 0;
+}
+
+.main__description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  margin-top: 16px;
+}
+
+.main__input-search {
+  min-height: 46px;
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #828282;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.main__list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.main__list-item {
+  margin-top: 12px;
+}
+
+.main__list-item-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.main__input-image {
+  width: 18px;
+  height: 18px;
+  background: url(../images/search_icon.png);
+  margin-left: -25px;
+  background-size: cover;
+}
+
+.main__input-wrap {
+  display: flex;
+  align-items: center;
+  width: 45.49%;
+}
+
+.main__input-search {
+  border: 1px solid #E0E0E0;
+}
+
+.main__input-search:focus {
+  border: 1px solid #868686;
+}
+
+.main__pagination {
+  width: 43.68%;
+  min-height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.main__pagination-button {
+  border: none;
+  outline: none;
+  background: url(../images/left_arrow.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 76px;
+  height: 10px;
+}
+
+.main__pagination-button:last-of-type {
+  transform: rotate(180deg);
+}
+
+.main__pagination-letter {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #BDBDBD;
+  transition: all 0.2s ease-out;
+}
+
+.main__pagination-letter:hover {
+  color: #333333;
+}
+
+.main__pagination-letter_active {
+  color: #333333;
+}
+
+.country__header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  color: #333333;
+}
+
+.country__description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.country__description-state {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.country__disease-wrap {
+  display: flex;
+  width: 53.47%;
+  justify-content: space-between;
+}
+
+.country__disease-col {}
+
+.country__disease {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  margin-bottom: 14px;
+}
+
+.country__description-state {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.country__disease-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  opacity: 0.5;
+}
+
+.country__disease-item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.country__disease-item-state {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.country__disease-item-state_color_danger {
+  color: #EB5757;
 }
