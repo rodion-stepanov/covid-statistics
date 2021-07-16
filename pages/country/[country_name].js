@@ -5,9 +5,6 @@ const API_KEY = process.env.API_KEY;
 export default function Country({ data }) {
   const [countryData, setCountryData] = useState(data.response[0])
 
-  useEffect(() => {
-    console.log(countryData)
-  }, [])
   return (
     <MainLayout>
       <h1 className="country__header">{countryData.country}</h1>
@@ -19,7 +16,7 @@ export default function Country({ data }) {
         <div className="country__disease-col">
           <p className="country__disease">Заболевшие: <span className="country__description-state">{countryData.cases.total}</span></p>
           <p className="country__disease-description">{countryData.cases['1M_pop']}/1 млн. населения</p>
-          <p className="country__disease-item">Новые случаи за сутки: <span className="country__disease-item-state country__disease-item-state_color_danger">{countryData.cases.new}</span></p>
+          <p className="country__disease-item">Новые случаи за сутки: <span className="country__disease-item-state country__disease-item-state_color_danger">{countryData.cases.new ? countryData.cases.new : '-'}</span></p>
           <p className="country__disease-item">Болеют в активной стадии: <span className="country__disease-item-state">{countryData.cases.active}</span></p>
           <p className="country__disease-item">Критическое состояние: <span className="country__disease-item-state">{countryData.cases.critical}</span></p>
           <p className="country__disease-item">Выздоровели: <span className="country__disease-item-state">{countryData.cases.recovered}</span></p>
@@ -28,7 +25,7 @@ export default function Country({ data }) {
         <div className="country__disease-col">
           <p className="country__disease">Умерли: <span className="country__description-state">{countryData.deaths.total}</span></p>
           <p className="country__disease-description">{countryData.deaths['1M_pop']}/1 млн. населения</p>
-          <p className="country__disease-item">Новые случаи за сутки: <span className="country__disease-item-state country__disease-item-state_color_danger">{countryData.deaths.new}</span></p>
+          <p className="country__disease-item">Новые случаи за сутки: <span className="country__disease-item-state country__disease-item-state_color_danger">{countryData.deaths.new ? countryData.deaths.new : '-'}</span></p>
         </div>
 
         <div className="country__disease-col">
