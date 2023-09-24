@@ -11,7 +11,7 @@
 
 ## Установка 
 1. Клонировать этот репозиторий:
-    + git clone https://github.com/Rodion257/covid-statistics.git
+    + git clone https://github.com/rodion-stepanov/covid-statistics.git
 
 2. Установить зависимости:
     + npm install
